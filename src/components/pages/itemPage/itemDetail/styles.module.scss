@@ -1,0 +1,149 @@
+@import "../../../../utils/styles/variables.scss";
+
+.itemContainer {
+  background: $ml__white--100;
+  padding: 16px;
+  max-width: 1280px;
+  box-sizing: border-box;
+
+  .mainInfo {
+    display: flex;
+    flex-direction: column;
+
+    .itemImage {
+      width: 100%;
+      max-width: 890px;
+      padding-top: 100%;
+      border: 1px solid $ml__gray--300;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    .itemInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 32px;
+
+      span {
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 8px 0;
+        text-align: center;
+      }
+
+      .itemPricing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 32px;
+
+        h2 {
+          font-size: 32px;
+          margin: 12px 0;
+          display: flex;
+
+          span {
+            margin: 5px 0 0 4px;
+          }
+        }
+
+        .freeShippingIcon {
+          background-color: $ml__green--500;
+          border-radius: 50px;
+          color: $ml__white--100;
+          font-size: 16px;
+          font-weight: 600;
+          width: fit-content;
+          padding: 8px 16px;
+        }
+      }
+    }
+  }
+
+  .itemDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .descriptionTitle {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .descriptionBody {
+      font-size: 18px;
+      text-align: justify;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .itemContainer {
+    padding: 24px;
+
+    .mainInfo {
+      flex-direction: row;
+
+      .itemImage {
+        width: 60%;
+        padding-top: 60%;
+        margin-right: 24px;
+      }
+
+      .itemInfo {
+        align-items: flex-start;
+        width: 40%;
+
+        h1 {
+          text-align: start;
+        }
+
+        .itemPricing {
+          align-items: flex-start;
+        }
+      }
+    }
+
+    .itemDescription {
+      align-items: flex-start;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .itemContainer {
+    padding: 32px;
+
+    .mainInfo {
+      .itemImage {
+        width: 70%;
+        padding-top: 70%;
+        margin-right: 32px;
+      }
+      .itemInfo {
+        width: 30%;
+      }
+    }
+
+    .itemDescription .descriptionBody {
+      width: 70%;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../../utils/styles/variables.scss";
+
+.mlButton {
+  background: $ml__blue--500;
+  width: 100%;
+  margin: 16px 0;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  font-size: 18px;
+  line-height: 20px;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    cursor: pointer;
+    background: $ml__blue--600;
+  }
+
+  &.isLoading {
+    background: $ml__blue--600;
+  }
+
+  .loader {
+    width: 20px;
+    height: 20px;
+    border: 2px solid $ml__white--100;
+    border-radius: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 2s linear infinite;
+
+    span {
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      border: 2px solid $ml__blue--600;
+      background: $ml__blue--600;
+    }
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

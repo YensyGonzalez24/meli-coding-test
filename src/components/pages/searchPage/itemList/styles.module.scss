@@ -1,0 +1,9 @@
+@import "../../../../utils/styles/variables.scss";
+
+.listContainer {
+  width: 100%;
+  max-width: 1280px;
+  background-color: $ml__white--100;
+  padding: 0 16px;
+  box-sizing: border-box;
+}

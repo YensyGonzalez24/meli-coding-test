@@ -1,0 +1,28 @@
+@import "../../../utils/styles/variables.scss";
+
+.breadcrumbsContainer {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 16px 0 16px 32px;
+
+  .breadcrumbItem {
+    font-size: 18px;
+    font-weight: 500;
+    color: $ml__gray--500;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin: 0 4px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .breadcrumbsContainer {
+    margin-left: 0;
+  }
+}
