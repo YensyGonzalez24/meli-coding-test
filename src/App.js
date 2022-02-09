@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.scss";
+import MainLayout from "./components/layout/mainLayout";
+import { Routes, Route } from "react-router-dom";
+
+import ItemPage from "./pages/itemPage";
+import SearchPage from "./pages/searchPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <MainLayout>
+        <Routes>
+          <Route path="/items/:id" element={<ItemPage />} />
+          <Route path="/items" element={<SearchPage />} />
+        </Routes>
+      </MainLayout>
     </div>
   );
 }

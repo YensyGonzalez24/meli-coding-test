@@ -1,0 +1,74 @@
+@import "../../../utils/styles/variables.scss";
+
+.header {
+  background: $ml__yellow--500;
+  display: flex;
+  justify-content: center;
+
+  .headerContainer {
+    height: 65px;
+    width: 100%;
+    max-width: 1280px;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    .headerLogo {
+      height: 80%;
+      margin-top: 6px;
+    }
+
+    .searchBar {
+      height: 100%;
+      width: 100%;
+      max-width: 1280px;
+      display: flex;
+      align-items: center;
+
+      form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border-radius: 25px;
+        position: relative;
+      }
+
+      .searchInput {
+        width: 36px;
+        padding: 0;
+        height: 36px;
+        border: none;
+        font-size: 16px;
+        border-radius: 25px;
+        box-sizing: border-box;
+        transition: all 1s ease-in-out;
+        position: absolute;
+      }
+
+      .submitButton {
+        height: 36px;
+        width: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 25px;
+        border: none;
+        position: absolute;
+
+        img {
+          height: 20px;
+        }
+      }
+    }
+
+    .isOpen {
+      .searchInput {
+        width: 100%;
+        padding: 0 16px;
+      }
+    }
+  }
+}
